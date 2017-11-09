@@ -6,20 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  inativo: boolean = true;
+ texto: string = 'Texto inicial.';
+ inativo: boolean = false;
 
-  texto: string = 'Texto do placeholder';
-
-  constructor(){
-    this.colocarAtivo();
-  }
-
-  colocarAtivo(){
-    setTimeout(() => {
-      this.inativo = false;
-      this.texto = 'Texto alterado em 5s';
-    }, 5000);
-  }
+ onClick(){
+   this.texto = 'Novo de texto depois do click.';
+   this.inativo = true;
+ }
 
 
 }

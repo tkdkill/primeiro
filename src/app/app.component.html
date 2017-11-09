@@ -1,9 +1,9 @@
-<!-- Angular #013 Databinding Property binding -->
+<!-- Angular #014 Databinding Event binding -->
 <div class="container">
     <div class="panel panel-default espaco">
-            <button class="btn btn-primary">Executar</button>
-            <button class="btn btn-primary" [disabled]="inativo">Executar</button>
-            <input type="text" [placeholder]="texto">
+            <button class="btn btn-primary" (click)="onClick()">Executar</button>
+            <button class="btn btn-primary" [disabled]="inativo">Outro botão</button>
+            <p>{{texto}}</p>
     </div>
         
 </div>
