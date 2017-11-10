@@ -1,19 +1,18 @@
-<!-- Angular #014 Databinding Event binding -->
+<!-- Angular #017 - Event binding e o $event - parte 2 -->
 <div class="container">
-    <div class="panel panel-default espaco">
-            <button class="btn btn-primary" (click)="onClick()">Executar</button>
-            <button class="btn btn-primary" [disabled]="inativo">Outro botão</button>
-            <p>{{texto}}</p>
-    </div>
-        
+  <div class="panel panel-default espaco">
+
+    <p>{{texto}}</p>
+
+    <button class="btn btn-primary" 
+            (click)="clicar($event)"
+            (mouseover)="mouseover($event)"
+            (mousemove)="mousemove($event)" 
+
+            >
+            EXPERMENTAR ESTE BOTÃO</button>
+    <input type="text" name="text" (input)="executar($event)">
+
+  </div>
+
 </div>
-
-
-
-
-
-
-
-
-
-

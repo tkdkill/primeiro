@@ -6,13 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
- texto: string = 'Texto inicial.';
- inativo: boolean = false;
 
- onClick(){
-   this.texto = 'Novo de texto depois do click.';
-   this.inativo = true;
- }
+  texto: string = '';
 
+  clicar(event: any){
+    this.texto = 'Clicou';
+  }
+    mouseover(event: any){
+      this.texto = event.screenX;
+    }
+
+  mousemove(event: any){
+    this.texto = event.screenX + '-' + event.screenY;
+    console.log(event);
+  }
+
+  executar(event: Event){
+    this.texto = (<HTMLInputElement>event.target).value;
+
+  }
 
 }
