@@ -1,17 +1,14 @@
-<!-- Angular #017 - Event binding e o $event - parte 2 -->
+<!-- Angular #018 - Databinding nos dois sentidos -->
+
 <div class="container">
   <div class="panel panel-default espaco">
 
-    <p>{{texto}}</p>
+    <!--<input type="text" class="form-control" (input)="text_Changed($event)">-->
+    <input type="text" class="form-control" [(ngModel)]="valor"> 
 
-    <button class="btn btn-primary" 
-            (click)="clicar($event)"
-            (mouseover)="mouseover($event)"
-            (mousemove)="mousemove($event)" 
+    <p>{{valor}}</p>
 
-            >
-            EXPERMENTAR ESTE BOTÃO</button>
-    <input type="text" name="text" (input)="executar($event)">
+    <button class="btn btn-primary" (click)="alterartexto()">Clicar</button>
 
   </div>
 
