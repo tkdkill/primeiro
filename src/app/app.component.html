@@ -1,12 +1,19 @@
-<!-- Angular #019 Introdução às Directives -->
-
+<!-- Angular #020 Directive ngIf com uma condição Else -->
 <div class="container">
   <div class="panel panel-default espaco">
 
-    <p *ngIf="apresentar">Este é um paragrafo</p>
+    <p *ngIf="apresentar; else outroParagrafo">Este é o parágrafo um</p>
+
+    <ng-template #outroParagrafo>
+      <h2>Este é o parágrafo dois</h2>
+    </ng-template>
 
 
-    <button class="btn btn-primary" (click)="btn_Click()">{{texto_botao}}</button>
+
+    <!-- <p *ngIf="!apresentar">Este é o parágrafo dois</p> -->
+
+
+    <button class="btn btn-primary" (click)="btn_click()">Clicar</button>
 
 
   </div>

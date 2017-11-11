@@ -6,19 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  texto_botao: string = 'Apresentar';
+  
   apresentar: boolean = false;
 
-  btn_Click(){
-    //adicionar ou remover o parágrafo
+  btn_click(){
     if(this.apresentar){
       this.apresentar = false;
-      this.texto_botao = 'Apresentar';
     }else{
       this.apresentar = true;
-      this.texto_botao = 'Remover';
     }
-
   }
 
 }
