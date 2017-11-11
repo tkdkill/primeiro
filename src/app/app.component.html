@@ -1,14 +1,13 @@
-<!-- Angular #018 - Databinding nos dois sentidos -->
+<!-- Angular #019 Introdução às Directives -->
 
 <div class="container">
   <div class="panel panel-default espaco">
 
-    <!--<input type="text" class="form-control" (input)="text_Changed($event)">-->
-    <input type="text" class="form-control" [(ngModel)]="valor"> 
+    <p *ngIf="apresentar">Este é um paragrafo</p>
 
-    <p>{{valor}}</p>
 
-    <button class="btn btn-primary" (click)="alterartexto()">Clicar</button>
+    <button class="btn btn-primary" (click)="btn_Click()">{{texto_botao}}</button>
+
 
   </div>
 
