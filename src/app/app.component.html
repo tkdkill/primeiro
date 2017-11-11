@@ -1,17 +1,20 @@
-<!-- Angular #021 Attribute Directive ngStyle -->
+<!-- Angular #022 - Attribute Directive ngClass -->
 <div class="container">
   <div class="panel panel-default espaco">
 
-    <div [ngStyle]="{backgroundColor: cor}">
+    <!-- utilização da diretiva ngStyle -->
+    <p [ngStyle]="{'background-color': 'red', 'color': 'white'}">Texto de um parágrafo</p>
 
-      <p>Texto da caixa 1</p>
-    </div>
+    <!-- utilização da diretiva ngStyle com camelCase-->
+    <p [ngStyle]="{backgroundColor: 'green', color: 'yellow'}">Texto de um parágrafo</p>
 
+    <!-- utilização da diretiva ngStyle com um método-->
+    <p [ngStyle]="alterarEstilo()">Texto de um parágrafo</p>
 
-    <button class="btn btn-primary" (click)="btn_Click()">Alterar cor 1</button>
+    <!-- utilização de ngClass-->
+<p [ngClass]="{ativo: estado === true, inativo: estado === false}">Novo parágrafo.</p>
 
-
-
+    <button class="btn btn-primary" (click)="alternar()">{{estado}}</button>
 
 
   </div>
