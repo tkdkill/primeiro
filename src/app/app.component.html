@@ -2,19 +2,14 @@
 <div class="container">
   <div class="panel panel-default espaco">
 
-    <div [ngStyle]="{'color': 'red', backgroundColor: cor}">
+    <div [ngStyle]="{backgroundColor: cor}">
 
       <p>Texto da caixa 1</p>
     </div>
 
-<div [ngStyle]="{backgroundColor: cor2}">
 
-      <p>Texto da caixa 2</p>
-    </div>
+    <button class="btn btn-primary" (click)="btn_Click()">Alterar cor 1</button>
 
-    <button class="btn btn-primary" (click)="alterarCor()">Alterar cor 1</button>
-
-    <button class="btn btn-primary" (click)="alterarCor2()">Alterar cor 2</button>
 
 
 
