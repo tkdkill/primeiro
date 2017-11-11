@@ -6,15 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
-  apresentar: boolean = false;
+  //corDoElemento: string = 'blue';
+  cor: string = 'red';
+  cor2: string = 'blue';
 
-  btn_click(){
-    if(this.apresentar){
-      this.apresentar = false;
-    }else{
-      this.apresentar = true;
-    }
+  alterarCor(){
+    this.cor = 'yellow';
+  }
+
+  alterarCor2(){
+    this.cor2 = '#25524412'
   }
 
 }

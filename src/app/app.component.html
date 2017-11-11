@@ -1,19 +1,22 @@
-<!-- Angular #020 Directive ngIf com uma condição Else -->
+<!-- Angular #021 Attribute Directive ngStyle -->
 <div class="container">
   <div class="panel panel-default espaco">
 
-    <p *ngIf="apresentar; else outroParagrafo">Este é o parágrafo um</p>
+    <div [ngStyle]="{'color': 'red', backgroundColor: cor}">
 
-    <ng-template #outroParagrafo>
-      <h2>Este é o parágrafo dois</h2>
-    </ng-template>
+      <p>Texto da caixa 1</p>
+    </div>
+
+<div [ngStyle]="{backgroundColor: cor2}">
+
+      <p>Texto da caixa 2</p>
+    </div>
+
+    <button class="btn btn-primary" (click)="alterarCor()">Alterar cor 1</button>
+
+    <button class="btn btn-primary" (click)="alterarCor2()">Alterar cor 2</button>
 
 
-
-    <!-- <p *ngIf="!apresentar">Este é o parágrafo dois</p> -->
-
-
-    <button class="btn btn-primary" (click)="btn_click()">Clicar</button>
 
 
   </div>
