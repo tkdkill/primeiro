@@ -1,21 +1,17 @@
-<!-- Angular #022 - Attribute Directive ngClass -->
+<!-- Angular #023 - Structure Directive ngFor -->
+<!-- para comentar código usar o CTR + ~ -->
 <div class="container">
   <div class="panel panel-default espaco">
 
-    <!-- utilização da diretiva ngStyle -->
-    <p [ngStyle]="{'background-color': 'red', 'color': 'white'}">Texto de um parágrafo</p>
+    <!-- <p *ngFor="let nome of lista_nomes">{{nome}}</p> -->
 
-    <!-- utilização da diretiva ngStyle com camelCase-->
-    <p [ngStyle]="{backgroundColor: 'green', color: 'yellow'}">Texto de um parágrafo</p>
+    <!-- <div class="alert alert-success" *ngFor="let nome of lista_nomes">
 
-    <!-- utilização da diretiva ngStyle com um método-->
-    <p [ngStyle]="alterarEstilo()">Texto de um parágrafo</p>
+      <p>{{nome}}</p>
+    </div> -->
 
-    <!-- utilização de ngClass-->
-<p [ngClass]="{ativo: estado === true, inativo: estado === false}">Novo parágrafo.</p>
-
-    <button class="btn btn-primary" (click)="alternar()">{{estado}}</button>
-
+    <!-- Mostra os indices do nosso array -->
+    <p *ngFor="let nome of lista_nomes; let indice = index">{{indice}}</p>
 
   </div>
 
