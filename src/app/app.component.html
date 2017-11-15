@@ -1,17 +1,14 @@
-<!-- Angular #023 - Structure Directive ngFor -->
+<!-- Angular #029 - Exercício de adição de um Model -->
 <!-- para comentar código usar o CTR + ~ -->
 <div class="container">
   <div class="panel panel-default espaco">
+    <p>{{operacao.str_operacao}} {{operacao.resultado}}</p>
 
-    <!-- <p *ngFor="let nome of lista_nomes">{{nome}}</p> -->
 
-    <!-- <div class="alert alert-success" *ngFor="let nome of lista_nomes">
+    <button class="btn btn-primary" (click)="criarOperacao()">Criar Operação</button>
 
-      <p>{{nome}}</p>
-    </div> -->
 
-    <!-- Mostra os indices do nosso array -->
-    <p *ngFor="let nome of lista_nomes; let indice = index">{{indice}}</p>
+
 
   </div>
 

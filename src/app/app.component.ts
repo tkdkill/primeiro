@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { cl_operacao } from './operacao.model';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  lista_nomes: string[] = [
-    'António', 'Carlos', 'João', 'Ana'
-  ]
- 
+  operacao: cl_operacao;
+
+  criarOperacao() {
+    this.operacao = new cl_operacao();
+
+  }
 
 }
