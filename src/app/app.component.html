@@ -1,11 +1,10 @@
-<!-- Angular #029 - Exercício de adição de um Model -->
+<!-- Angular #030 Dados de parent component para child component @Input -->
 <!-- para comentar código usar o CTR + ~ -->
 <div class="container">
   <div class="panel panel-default espaco">
-    <p>{{operacao.str_operacao}} {{operacao.resultado}}</p>
-
-
-    <button class="btn btn-primary" (click)="criarOperacao()">Criar Operação</button>
+    
+    <!-- <app-socios [nome] = 'novo_nome'></app-socios> -->
+    <app-socios [socios] = 'novos_socios'></app-socios>
 
 
 
