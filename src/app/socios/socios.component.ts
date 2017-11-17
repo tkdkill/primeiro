@@ -7,16 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class SociosComponent {
 
-  // @Input() nome: string = 'António';
-
-   @Input() socios = [];
-
-  constructor() {
-    this.socios.push({nome: 'António', contacto: '12345'});
-    this.socios.push({nome: 'Pedro', contacto: '12354' });
-    this.socios.push({nome: 'João', contacto: '21345' });
-    this.socios.push({nome: 'Margarida', contacto: '31254'});
-  }
+  @Input('nome_novo') nome: String = 'Antonio';
 
 
 }
