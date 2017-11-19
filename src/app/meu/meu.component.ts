@@ -10,15 +10,12 @@ export class MeuComponent implements OnInit {
 
   nome: string = 'António';
 
-  @Output() evento = new EventEmitter();
+  @Output() evento = new EventEmitter<string>();
 
   AlterarNome() {
     this.nome = 'João';
-    this.evento.emit();
+    this.evento.emit(this.nome);
   }
-
-
-
 
 
 

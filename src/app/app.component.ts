@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   info: string = 'Tudo calmo';
 
-  escuta() {
-    this.info = 'Nome alterado';
+  escuta(valor: string) {
+    this.info = 'Nome foi alterado para ' + valor;
   }
 
 }
