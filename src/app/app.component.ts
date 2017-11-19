@@ -7,7 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  info: string = 'Tudo calmo';
 
-  valor: string = 'João';
+  escuta() {
+    this.info = 'Nome alterado';
+  }
 
 }
